@@ -1,0 +1,273 @@
+<header id="header--style-two">
+  <div class="inner-header">
+    <div class="menu">
+      <span class="hamburger-menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="23"
+          viewBox="0 0 40 23"
+          fill="none"
+          class="icon icon-hamburger"
+        >
+          <path d="M13.3333 21.5H40M0 11.5H40M0 1.5H26.6667" stroke="Currentcolor" stroke-width="2" stroke-linejoin="round"></path>
+        </svg>
+      </span>
+      <div class="mega-menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          focusable="false"
+          class="icon icon-close"
+          fill="none"
+          viewBox="0 0 18 17"
+        >
+            <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
+          </path>
+        </svg>
+        <div class="mega-menu-inner">
+          <div class="left-menu">
+         
+              <ul class="header__menu-list" role="list">
+                
+                  {% for block in section.blocks %}
+                    <li>
+                       <p class="menu-title"> {{ block.settings.menu-title }} </p>
+                      {% assign menulist = block.settings.menu-list %}
+                      <ul>
+                          {% for link in linklists[menulist].links %}
+                            <li>
+                              <a href="{{ link.url }}">{{ link.title }}</a>
+                              {% for sublink in link.links %}
+                                <li><a href="{{ sublink.url }}">{{ sublink.title }}</a></li>
+                              {% endfor %}
+                            </li>
+                          {% endfor %}
+                      </ul>
+                    </li>
+                  {% endfor %}        
+              </ul>
+          
+            <!-- <ul class="header__menu-list" role="list">
+              <li>
+                <ul>
+                  <li>
+                    <a href="/pages/yoga-studio">Yoga &amp; Pilates</a>
+                  </li>
+                  <li>
+                    <a href="/pages/hiit-studio">HIIT</a>
+                  </li>
+                  <li>
+                    <a href="/pages/ride-studio">Ride</a>
+                  </li>
+                  <li>
+                    <a href="/pages/personal-training">Personal Training</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="/pages/tonic-house"> CONNECT </a>
+                <ul>
+                  <li>
+                    <a href="/pages/tonic-house">Workspace</a>
+                  </li>
+                  <li>
+                    <a href="/pages/tonic-bar">BAR &amp; CAFÉ</a>
+                  </li>
+                  <li>
+                    <a href="/pages/event-space-rental">Event Space Rental</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="/pages/spa"> RECOVER </a>
+                <ul>
+                  <li>
+                    <a href="https://tonicspa.janeapp.com/">Book a treatment</a>
+                  </li>
+                  <li>
+                    <a href="/pages/sauna">Infrared sauna</a>
+                  </li>
+                  <li>
+                    <a href="/pages/massage-therapy">Massage Therapy</a>
+                  </li>
+                  <li>
+                    <a href="/pages/spa">View all services</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="/pages/about"> ABOUT S&amp;T </a>
+                <ul>
+                  <li>
+                    <a href="/pages/team">Team</a>
+                  </li>
+                  <li>
+                    <a href="/pages/about">Our Story</a>
+                  </li>
+                  <li>
+                    <a href="/pages/locations">Locations</a>
+                  </li>
+                  <li>
+                    <a href="/pages/press">Press &amp; media</a>
+                  </li>
+                </ul>
+              </li>
+            </ul> -->
+          </div>
+          <div class="right-menu">
+            <h3>The best of boutique fitness & wellness under one roof</h3>
+            <div class="header-collection">
+              <div class="collection-1">
+                <div class="header__menu-img-wrapper">
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0714/1251/5036/files/header-img-1.webp?v=1724223146"
+                    alt="{{ site.url }}" width="" height=""
+                  >
+                </div>
+                <div class="header__menu-content-wrapper">
+                  <h5>TRY 3 CLASSES FOR $60</h5>
+                  <a href="#" class="btn btn-link"
+                    >Get an intro pack
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none">
+                      <path d="M8 1.5L12 5.5M12 5.5L8 9.5M12 5.5L0 5.5" stroke="currentColor" stroke-width="1.5"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="collection-2">
+                <div class="header__menu-img-wrapper">
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0714/1251/5036/files/header-img-2.webp?v=1724223146"
+                    alt="{{ site.url }}" width="" height=""
+                  >
+                </div>
+                <div class="header__menu-content-wrapper">
+                  <h5>S&T SHOP</h5>
+                  <a href="#" class="btn btn-link"
+                    >Sweat in style 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none">
+                      <path d="M8 1.5L12 5.5M12 5.5L8 9.5M12 5.5L0 5.5" stroke="currentColor" stroke-width="1.5"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="logo">
+      <!-- TopTrends -->
+      <a href="/">
+         <img
+        class="header-logo"
+        src="{{ section.settings.logo1 | image_url }}"
+        alt=""
+           width=""
+           height=""
+      >
+      <img
+        class="header-logo--after-scrolling"
+        src="{{ section.settings.logo2 | image_url }}"
+        alt=""
+           width=""
+           height=""
+      >
+      </a>
+    </div>
+    <div class="header__icons-col">
+      {% if section.settings.login-btn %}
+      <div class="login">
+        <a href="#" class="btn btn--link">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="19"
+            viewBox="0 0 16 19"
+            fill="none"
+            class="icon icon-account"
+          >
+            <path d="M12.4442 5.94444C12.4442 6.82347 12.1836 7.68276 11.6952 8.41365C11.2068 9.14453 10.5127 9.71419 9.7006 10.0506C8.88848 10.387 7.99485 10.475 7.13272 10.3035C6.27058 10.132 5.47865 9.70871 4.85709 9.08714C4.23552 8.46557 3.81223 7.67365 3.64074 6.81151C3.46925 5.94937 3.55726 5.05575 3.89365 4.24363C4.23004 3.43151 4.7997 2.73739 5.53058 2.24902C6.26147 1.76066 7.12075 1.5 7.99978 1.5C9.17852 1.5 10.309 1.96825 11.1425 2.80175C11.976 3.63524 12.4442 4.7657 12.4442 5.94444ZM8.88867 10.3889H7.11089C5.46066 10.3889 3.87801 11.0444 2.71112 12.2113C1.54423 13.3782 0.888672 14.9609 0.888672 16.6111C0.888672 16.8469 0.982323 17.073 1.14902 17.2397C1.31572 17.4064 1.54181 17.5 1.77756 17.5H14.222C14.4578 17.5 14.6838 17.4064 14.8505 17.2397C15.0172 17.073 15.1109 16.8469 15.1109 16.6111C15.1109 14.9609 14.4553 13.3782 13.2884 12.2113C12.1216 11.0444 10.5389 10.3889 8.88867 10.3889Z" stroke="Currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+            <span>Login</span></a
+        >
+      </div>
+      {% endif %}
+      {% if section.settings.book-classes %}
+      <div class="book-classes "><a href="" class="btn btn-outline-light"> Book Classes</a></div>
+        {% endif %}
+      {% if section.settings.buy-classes %}
+      <div class="buy-classes"><a href="" class=" btn btn-light">Buy Classes</a></div>
+        {% endif %}
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header Style 2",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo1",
+      "label": "Select Logo"
+    },
+      {
+      "type": "image_picker",
+      "id": "logo2",
+      "label": "Logo After Scrolling"
+    },
+    {
+      "type": "checkbox",
+      "id": "login-btn",
+      "label": "Show Login Button",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "book-classes",
+      "label": "Show Book Now Button",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "buy-classes",
+      "label": "Show Buy Now Button",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Menu Links",
+      "type": "select",
+      "settings": [
+        {
+          "type": "text",
+          "id": "menu-title",
+          "label": "Menu Title"
+        },
+        {
+          "type": "link_list",
+          "id": "menu-list",
+          "label": "Select Menu"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header Style 2"
+    }
+  ]
+}
+{% endschema %}
+
+{% javascript %}
+  $('.icon-hamburger').click(function(){
+         $('.mega-menu').addClass('active')
+     })
+     $('.icon-close').click(function(){
+         $('.mega-menu').removeClass('active')
+     });
+{% endjavascript %}
